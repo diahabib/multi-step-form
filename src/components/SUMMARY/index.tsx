@@ -2,8 +2,6 @@ import "./style.css";
 import { FormData } from "../../types/types";
 import { useEffect, useState } from "react";
 const Summary = ({ formData }: { formData: FormData }) => {
-  console.log(formData);
-  console.log(formData.selectedAddOns);
   const isYearly = formData.selectedPlan.billingOption === "yearly";
   const [totalAddons, setTotalAddons] = useState(0);
   const [total, setTotal] = useState(0);
@@ -22,8 +20,6 @@ const Summary = ({ formData }: { formData: FormData }) => {
     setTotal(planPrice + addonsTotal);
   }, [formData.selectedAddOns, formData.selectedPlan, isYearly]);
 
-  console.log(totalAddons);
-  console.log(total);
   return (
     <div className="text-neutral-cool-gray mb-4 p-4 pt-8 ps-10 lg:ps-8">
       <h1 className="font-700 text-2xl lg:text-3xl text-primary-marine-blue">
@@ -60,7 +56,7 @@ const Summary = ({ formData }: { formData: FormData }) => {
         <hr className="w-11/12 m-auto" />
         {formData.selectedAddOns.map((add_on) => (
           <div
-            key={formData.selectedPlan.plan}
+            key={add_on.title + add_on.price}
             className={`flex justify-between grow gap-4 py-4 p-4  
               `}
           >

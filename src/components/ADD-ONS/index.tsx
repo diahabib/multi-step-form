@@ -64,16 +64,11 @@ const Addons = ({ formData, onUpdate }: AddonsProps) => {
         };
       });
 
-      // ✅ Pass only the updated add-ons array
       onUpdate(updatedAddOns);
 
       return newSelection;
     });
   };
-
-  console.log("Test 2");
-  console.log(formData);
-  console.log(selectedAddOns);
 
   return (
     <div className="text-primary-marine-blue mb-4 p-4 pt-8 ps-10  lg:ps-8">

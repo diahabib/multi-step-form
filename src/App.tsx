@@ -96,11 +96,6 @@ function App() {
       return;
     }
     setErrors({});
-    console.log("errors", errors);
-    if (currentStep === steps.length - 1) {
-      // Soumission finale ici
-      console.log("Form submitted:", formData);
-    }
 
     setCurrentStep((prev) => Math.min(prev + 1, steps.length));
   };
