@@ -3,7 +3,6 @@ import { FormData } from "../../types/types";
 import { useEffect, useState } from "react";
 const Summary = ({ formData }: { formData: FormData }) => {
   const isYearly = formData.selectedPlan.billingOption === "yearly";
-  const [totalAddons, setTotalAddons] = useState(0);
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -11,7 +10,6 @@ const Summary = ({ formData }: { formData: FormData }) => {
       (acc, addon) => acc + addon.price,
       0
     );
-    setTotalAddons(addonsTotal);
 
     const planPrice = isYearly
       ? formData.selectedPlan.yearlyPrice ?? 0
