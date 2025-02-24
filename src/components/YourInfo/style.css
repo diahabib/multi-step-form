@@ -1,0 +1,7 @@
+input:focus {
+  outline: none;
+}
+
+.personal-info-form {
+  color: var(--marine-blue);
+}

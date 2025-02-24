@@ -1,0 +1,62 @@
+.container {
+  height: 100vh;
+  background-color: white;
+}
+
+.steps-sidebar {
+  background-image: url("./assets/images/bg-sidebar-mobile.svg");
+  background-size: cover;
+  max-height: 180px;
+}
+.step-numeration {
+  display: none;
+  float: right;
+}
+
+.step-numeration h3 {
+  font-weight: bolder;
+}
+
+.step-numeration p {
+  color: hsl(231, 11%, 63%);
+}
+
+.current-step {
+  background-color: var(--light-blue);
+  color: var(--purplish-blue);
+}
+
+.step-item {
+  font-weight: bold;
+}
+
+.form-container {
+  background-color: var(--magnolia);
+}
+
+@media screen and (width >= 992px) {
+  .steps-sidebar {
+    background-image: url("./assets/images/bg-sidebar-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 100%;
+  }
+
+  .step-numeration {
+    display: block;
+  }
+
+  .form-container {
+    background-color: white;
+  }
+}
+
+/*li {
+  float: left;
+}*/
+
+/*span {
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 1px;
+}*/
